@@ -154,6 +154,7 @@ class CountryPicker extends Component {
     return (
       <View>
         <TouchableOpacity
+          pointerEvents={'box-only'}
           onPress={()=> this.setState({modalVisible: true})}
           activeOpacity={0.7}>
           {this.props.touchableView}
@@ -248,7 +249,7 @@ const styles = StyleSheet.create({
 });
 
 CountryPicker.propTypes = {
-  // cca2: React.PropTypes.string.isRequired,
+  cca2: React.PropTypes.string.isRequired,
   translation: React.PropTypes.string,
   onChange: React.PropTypes.func.isRequired,
   closeable: React.PropTypes.bool
