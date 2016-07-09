@@ -156,11 +156,7 @@ class CountryPicker extends Component {
         <TouchableOpacity
           onPress={()=> this.setState({modalVisible: true})}
           activeOpacity={0.7}>
-          <View style={styles.touchFlag}>
-            <Image
-              style={styles.imgStyle}
-              source={{uri: CountryFlags[this.state.cca2]}}/>
-          </View>
+          {this.props.touchableView}
         </TouchableOpacity>
         <Modal
           visible={this.state.modalVisible}
@@ -252,7 +248,7 @@ const styles = StyleSheet.create({
 });
 
 CountryPicker.propTypes = {
-  cca2: React.PropTypes.string.isRequired,
+  // cca2: React.PropTypes.string.isRequired,
   translation: React.PropTypes.string,
   onChange: React.PropTypes.func.isRequired,
   closeable: React.PropTypes.bool
