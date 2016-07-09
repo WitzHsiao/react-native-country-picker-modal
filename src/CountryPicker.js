@@ -154,7 +154,6 @@ class CountryPicker extends Component {
     return (
       <View>
         <TouchableOpacity
-          pointerEvents={'box-only'}
           onPress={()=> this.setState({modalVisible: true})}
           activeOpacity={0.7}>
           {this.props.touchableView}
